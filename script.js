@@ -37,9 +37,7 @@ function pariOdispari(numero){
   return numero % 2 === 0;
 
 }
-
-// document.getElementById('output').innerHTML = `
-// Il giocatore ha giocato ${pariOdispari} con numero ${numeroUser} <br>
-// Il pc ha giocato ${numeroPc}  <br>
-// ${messaggio}
-// `
+titolo.innerHTML += `Il giocatore ha giocato ${pariOdispari} con numero ${numeroUser} <br>
+Il pc ha giocato ${numeroPc}  <br>
+${messaggio}
+`
