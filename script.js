@@ -43,4 +43,35 @@ titolo.innerHTML += `Il giocatore ha giocato ${sceltaUser} con numero : ${numero
 Il pc ha giocato : ${numeroRandom}  <br>
 Il risultato e : ${somma}
 ${messaggio}
+
+
+
 `
+
+const inputWord = prompt("inserisci una parola per scoprire se è palindroma")
+
+if(palindrom(inputWord)){
+  console.log("la parola è palindroma");
+}else{
+  console.log(" la parola non è palindroma");
+}
+
+// creo la funzione che userà la parola di input
+
+
+function palindrom(inputWord){
+ 
+  inputWord = inputWord.toLowerCase();  
+
+  if (/\d/.test(inputWord)){
+    console.log("la parola che hai inserto contiene numeri e non può essere analizzata")
+    return false;
+  };
+  
+  for( let i = 0; i < inputWord.length -1 ; i++){
+    if(inputWord[i] === inputWord[inputWord.length -1 - i]){
+    
+      return true
+    };
+ 
+}};
