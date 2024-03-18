@@ -15,7 +15,7 @@ let messaggio ;
 
 if(sceltaUser.toLowerCase() === 'pari' ||
 
-sceltaUser.toLowerCase() === 'dispari'){
+ sceltaUser.toLowerCase() === 'dispari'){
   
   messaggio = 'vince il giocatore'
  
@@ -26,10 +26,11 @@ sceltaUser.toLowerCase() === 'dispari'){
 
 
 
-function numeroRandom(){
+function numeroRandom(numero){
 
-  return Math.floor(Math.random() * 5) + 1;
+   let giocata = Math.floor(Math.random(1) * 5) + 1;
 
+  return giocata;
 }
 
 function pariOdispari(numero){
@@ -37,8 +38,9 @@ function pariOdispari(numero){
   return numero % 2 === 0;
 
 }
-titolo.innerHTML += `Il giocatore ha giocato ${sceltaUser} con numero ${numeroUser} <br>
-Il pc ha giocato ${numero}  <br>
-Il risultato e ${somma}
+
+titolo.innerHTML += `Il giocatore ha giocato ${sceltaUser} con numero : ${numeroUser} <br>
+Il pc ha giocato : ${numeroRandom}  <br>
+Il risultato e : ${somma}
 ${messaggio}
 `
